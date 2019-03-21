@@ -1,14 +1,14 @@
-CC = gcc
+CXX = g++
 
-CFILES = $(shell find src/ -name "*.c")
-OBJECTS = $(CFILES:.c=.o)
-CFLAGS = -ggdb -Wall
+CXXFILES = $(shell find src/ -name "*.cc")
+OBJECTS = $(CXXFILES:.cc=.o)
+CXXFLAGS = -std=c++11 -ggdb -Wall
 
 ash: $(OBJECTS)
-	$(CC) -o ash $(OBJECTS)
+	$(CXX) -o ash $(OBJECTS) -lreadline
 
 .PHONY: clean
 clean:
-	-rm ash $(OBJECTS) $(CFLAGS)
+	-rm ash $(OBJECTS) 
 
 

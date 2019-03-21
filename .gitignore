@@ -1,7 +1,9 @@
-*.*
-*
-!*/
-!*.c
-!*.h
-!Makefile
-!.gitignore
+# Intermediate files
+*.o
+ash
+
+# Clion files
+.idea/
+CMakeLists.txt
+cmake-build-debug/
+
